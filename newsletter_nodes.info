@@ -1,0 +1,6 @@
+name = Newsletter Nodes
+description = "XXXX"
+package = contrib
+
+core = "7.x"
+project = "newsletter_nodes"

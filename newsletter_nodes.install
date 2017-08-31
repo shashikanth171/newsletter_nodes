@@ -1,0 +1,24 @@
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Implements hook_install()
+ */
+function newsletter_nodes_install(){
+    // Populate the default {newsletter_nodes} record.
+  db_insert('newsletter_nodes')
+    ->fields(array(
+      'nid' => 0,
+//      'gid' => 0,
+//      'realm' => 'all',
+//      'grant_view' => 1,
+//      'grant_update' => 0,
+//      'grant_delete' => 0,
+    ))
+    ->execute();
+}

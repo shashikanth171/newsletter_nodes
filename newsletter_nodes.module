@@ -1,0 +1,101 @@
+<?php
+
+/**
+ * @file
+ * This is the file description for Newsletter Nodes module.
+ *
+ * @author shashikanth171
+ */
+
+/**
+ * Implements hook_perm().
+ */
+function newsletter_nodes_permission() {
+  $items = array(
+    'administer newsletter nodes' => array(
+      'title' => t('Administer Newsletter Nodes'),
+      'description' => t('Configure how Newsletter Nodes work'),
+    ),
+    'send newsletter nodes' => array(
+      'title' => t('Send Newsletter Nodes'),
+      'description' => t('Send Newsletter Nodes'),
+    ),
+    'test newsletter nodes' => array(
+      'title' => t('Test Newsletter Nodes'),
+      'description' => t('Test Newsletter Nodes'),
+    ),
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function newsletter_nodes_menu() {
+  $items = array(
+    'admin/config/newsletter-nodes' => array(
+        'title' => 'Newsletter Nodes',
+        'description' => 'Configure newsletter_nodes settings',
+        'access arguments' => array('administer newsletter nodes'),
+        'page callback' => 'newsletter_nodes_settings_form',
+     ),
+    'admin/newsletter-nodes/send' => array(
+        'title' => 'Send Newsletter Nodes',
+        'description' => 'Send newsletter_nodes mails',
+        'access arguments' => array('send newsletter nodes'),
+        'page callback' => 'send_newsletter_nodes_form',
+     ),
+    'admin/newsletter-nodes/test' => array(
+        'title' => 'Test Newsletter Nodes',
+        'description' => 'Test newsletter_nodes mails',
+        'access arguments' => array('test newsletter nodes'),
+        'page callback' => 'test_newsletter_nodes_form',
+     ),
+  );    
+  return $items;
+}
+
+/**
+ * newsletter_nodes_settings_form
+ */
+function newsletter_nodes_settings_form() {
+  
+}
+
+/**
+ * newsletter_nodes_settings_form_submit
+ */
+function newsletter_nodes_settings_form_submit($form, $form_state) {
+  
+}
+
+/**
+ * send_newsletter_nodes_form
+ */
+function send_newsletter_nodes_form() {
+  
+}
+
+/**
+ * send_newsletter_nodes_form_submit
+ */
+function send_newsletter_nodes_form_submit($form, $form_state) {
+  
+}
+
+/**
+ * test_newsletter_nodes_form
+ */
+function test_newsletter_nodes_form() {
+  
+}
+
+/**
+ * test_newsletter_nodes_form_submit
+ */
+function test_newsletter_nodes_form_submit($form, $form_state) {
+  
+}
+
+
+
